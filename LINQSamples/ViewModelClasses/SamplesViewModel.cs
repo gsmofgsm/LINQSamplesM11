@@ -37,8 +37,9 @@ namespace LINQSamples
             //query = Products.Where(prod => prod.Color == COLOR);
             //query = Products.FilterSimple(prod => prod.Color == COLOR)
             //    .Take(1);
-            query = Products.Where(prod => prod.Color == COLOR)
-                .Take(1);
+            //query = Products.Where(prod => prod.Color == COLOR)
+            //    .Take(1);
+            query = Products.Filter(prod => prod.Color == COLOR);
 
             Console.WriteLine("");
 
