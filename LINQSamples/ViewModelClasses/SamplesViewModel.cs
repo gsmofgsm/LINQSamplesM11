@@ -39,7 +39,8 @@ namespace LINQSamples
             //    .Take(1);
             //query = Products.Where(prod => prod.Color == COLOR)
             //    .Take(1);
-            query = Products.Filter(prod => prod.Color == COLOR);
+            query = Products.Filter(prod => prod.Color == COLOR)
+                .OrderBy(prod => prod.Color);
 
             Console.WriteLine("");
 
