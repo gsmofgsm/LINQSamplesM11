@@ -34,7 +34,11 @@ namespace LINQSamples
 
             // Create LINQ query
             // Add .ToList() to see immediate execution
-            query = Products.Where(prod => prod.Color == COLOR);
+            //query = Products.Where(prod => prod.Color == COLOR);
+            //query = Products.FilterSimple(prod => prod.Color == COLOR)
+            //    .Take(1);
+            query = Products.Where(prod => prod.Color == COLOR)
+                .Take(1);
 
             Console.WriteLine("");
 
